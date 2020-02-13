@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.primary-color {
+    background-color: #242424;
+    color: white;
+}
+
+.main-header {
+    padding-left: 50px;
+    border-bottom: solid 1px #CDD2D4;
+}
+
+@media screen and (min-width: 900px) {
+    .main-header h1 {
+        max-width: 990px;
+        margin: 0 auto;
+    }
+}
+
+.main-header h1 {
+    font-weight: 300;
+    padding: 50px 8px;
+    font-size: 20px;
+}
+
+.main-content {
+    padding: 20px 70px 0;
+    display: block;
+    text-align: center;
+}
+
+.main-wrapper {
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.full-width {
+    width: 100%;
+}

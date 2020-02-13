@@ -1,0 +1,16 @@
+.media-action-bar {
+    width: 100%;
+    padding: 2.5rem;
+    justify-content: center;
+  }
+
+.time-slider {
+    width: 100% !important;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.media-footer {
+    bottom: 0;
+    width: 100%;
+}

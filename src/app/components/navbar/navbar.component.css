@@ -1,0 +1,25 @@
+.navbar-spacer {
+    flex: 1 1 auto;
+}
+
+.navbar-color {
+    background-color: #242424;
+    color: white;
+}
+
+.logo-container {
+    margin-right: 50px; 
+    display: flex;
+}
+
+.vertical-line {
+    margin: 0px 10px; 
+    border-left: 1px solid #606060;
+}
+
+@media screen and (min-width: 900px) {
+    .main-navbar {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+}

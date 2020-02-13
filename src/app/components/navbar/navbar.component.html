@@ -1,0 +1,48 @@
+<mat-toolbar class="navbar-color">
+    <mat-toolbar-row class="main-navbar">
+      <div class="logo-container">
+        <span>MP</span>
+        <div class="vertical-line"></div>
+        <div>Portfolio</div>
+      </div>
+      <div>
+        <a mat-button routerLink="home">
+          Home
+        </a>
+      </div>
+      <div>
+        <a mat-button [matMenuTriggerFor]="uploadMenu">
+          Audios
+        </a>
+        <mat-menu #uploadMenu="matMenu" xPosition="before">
+          <button mat-menu-item routerLink="audio/list">List</button>
+          <button mat-menu-item routerLink="audio/create">Create</button>
+        </mat-menu>
+      </div>
+      <div>
+        <a mat-button routerLink="home">
+          Home
+        </a>
+      </div>
+      <div>
+        <a mat-button routerLink="home">
+          Home
+        </a>
+      </div>
+      <div>
+        <a mat-button routerLink="home">
+          Home
+        </a>
+      </div>
+      <span class="navbar-spacer"></span>
+      <div>
+        <button mat-button [matMenuTriggerFor]="userMenu">
+          correo@hotmail.com
+        </button>
+        <mat-menu #userMenu="matMenu" xPosition="before">
+          <button mat-menu-item>Perfil</button>
+          <button (click)="logout()" mat-menu-item>Logout</button>
+        </mat-menu>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>

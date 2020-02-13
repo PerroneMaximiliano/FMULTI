@@ -1,0 +1,62 @@
+<div class="main-header">
+    <h1>Create an audio</h1>
+  </div>
+  <div class="main-content">
+    <div class="main-wrapper">
+      <form [formGroup]="uploadForm" class="full-width">
+          <div>
+            <mat-form-field color="primary" class="full-width">
+              <input matInput placeholder="Número" formControlName="number">
+              <mat-error *ngIf="number.invalid && (number.dirty || number.touched)">
+                <div *ngIf="number.errors.required">
+                  The number is required.
+                </div>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field color="primary" class="full-width">
+              <input matInput placeholder="Name" formControlName="name">
+              <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">
+                <div *ngIf="name.errors.required">
+                  The name/title is required.
+                </div>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field color="primary" class="full-width">
+              <input matInput placeholder="Duration" formControlName="duration">
+              <mat-error *ngIf="duration.invalid && (duration.dirty || duration.touched)">
+                <div *ngIf="duration.errors.required">
+                  The duration is required.
+                </div>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div *ngIf="this.audio?.file && this.audio?.file != 'null'">
+            <audio controls>
+              <source src="{{ url + 'audio/' + this.audio?.file }}" type="audio/mpeg" />
+                El navegador web no soporta la reproducción de audio
+            </audio>
+          </div>
+          <div class="choose-file">
+            <div style="margin-right: 65px;">
+              <input type="file" placeholder="Upload audio..." formControlName="file" (change)="fileProgress($event)">
+            </div>
+            <div>
+              <span class="upload-progress">{{fileUploadProgress}}</span>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="error-message">{{message}}</div>
+            <button type="button" mat-raised-button (click)="upload()" class="save-button" [disabled]="!this.uploadForm.valid">
+              Save
+            </button>
+            <button type="button" mat-raised-button (click)="reset()">
+              Reset
+            </button>
+          </div>
+      </form>
+    </div>
+  </div>
