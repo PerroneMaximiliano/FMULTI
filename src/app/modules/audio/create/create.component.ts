@@ -13,6 +13,7 @@ export class CreateComponent implements OnInit {
   fileData: File = null;
   audio: any;
   message: string;
+  url: string;
 
   constructor(private formBuilder: FormBuilder, private audioService: AudiosService) { }
 
